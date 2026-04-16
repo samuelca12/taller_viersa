@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0d" />
+  <title>VIERSA · Taller Mecánico de Precisión · Tres Ríos, Costa Rica</title>
+  <meta name="description" content="Taller mecánico VIERSA en Concepción de Tres Ríos. Mantenimiento, frenos, lubricentro, diagnóstico y reparación para Toyota, Hyundai, Kia, Chevrolet, Suzuki y más." />
+
+  <link rel="icon" type="image/png" href="media/logo_viersa.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== Cursor halo ========== -->
+  <div class="cursor-halo" aria-hidden="true"></div>
+
+  <!-- ========== Page loader ========== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__bar"><span></span></div>
+    <div class="loader__brand">
+      <img src="media/logo_viersa.png" alt="" />
+      <span>VIERSA</span>
+    </div>
+  </div>
+
+  <!-- ========== Top Status Bar ========== -->
+  <div class="topbar" aria-hidden="true">
+    <div class="topbar__track">
+      <div class="topbar__row">
+        <span><i data-icon="bolt"></i> Diagnóstico computarizado</span>
+        <span class="dot"></span>
+        <span><i data-icon="shield"></i> Garantía en cada servicio</span>
+        <span class="dot"></span>
+        <span><i data-icon="wrench"></i> Repuestos originales y alternos</span>
+        <span class="dot"></span>
+        <span><i data-icon="pin"></i> Concepción de Tres Ríos · Costa Rica</span>
+        <span class="dot"></span>
+        <span><i data-icon="bolt"></i> Diagnóstico computarizado</span>
+        <span class="dot"></span>
+        <span><i data-icon="shield"></i> Garantía en cada servicio</span>
+        <span class="dot"></span>
+        <span><i data-icon="wrench"></i> Repuestos originales y alternos</span>
+        <span class="dot"></span>
+        <span><i data-icon="pin"></i> Concepción de Tres Ríos · Costa Rica</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== Navigation ========== -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="Ir al inicio">
+      <img src="media/logo_viersa.png" alt="VIERSA" />
+      <div class="nav__brand-text">
+        <strong>VIERSA</strong>
+        <small>Taller Mecánico</small>
+      </div>
+    </a>
+
+    <nav class="nav__menu" aria-label="Menú principal">
+      <a href="#servicios" data-link>Servicios</a>
+      <a href="#marcas" data-link>Marcas</a>
+      <a href="#repuestos" data-link>Repuestos</a>
+      <a href="#faq" data-link>FAQ</a>
+      <a href="#ubicacion" data-link>Ubicación</a>
+    </nav>
+
+    <div class="nav__cta">
+      <span class="status-pill" title="Horario">
+        <span class="status-pill__dot"></span>
+        <span id="statusText">Abierto</span>
+      </span>
+      <a class="btn btn--primary btn--magnetic" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20un%20servicio." target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.001 3C9.373 3 4 8.373 4 15a11.9 11.9 0 0 0 1.69 6.155L4 29l8.087-1.66A11.97 11.97 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3Zm0 21.5a9.51 9.51 0 0 1-4.85-1.327l-.347-.207-4.8.985.997-4.674-.226-.36A9.5 9.5 0 1 1 25.5 15c0 5.247-4.252 9.5-9.499 9.5Zm5.46-7.108c-.3-.15-1.77-.873-2.043-.972-.273-.1-.473-.15-.673.15-.2.3-.773.972-.948 1.172-.175.2-.35.224-.65.075-.3-.15-1.265-.466-2.41-1.488-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.46.13-.61.133-.132.3-.343.45-.515.149-.173.199-.298.299-.498.1-.2.05-.373-.025-.523-.075-.149-.673-1.622-.922-2.222-.243-.586-.49-.506-.673-.515l-.573-.01c-.2 0-.523.075-.797.373-.273.298-1.045 1.02-1.045 2.488s1.07 2.886 1.22 3.086c.149.2 2.107 3.214 5.103 4.503.713.307 1.27.49 1.704.628.715.227 1.366.195 1.882.118.574-.085 1.77-.722 2.02-1.42.249-.697.249-1.295.174-1.42-.075-.124-.273-.199-.573-.349Z"/></svg>
+        WhatsApp
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__bg">
+        <div class="hero__grid" aria-hidden="true"></div>
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+        <div class="hero__noise" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__rail" aria-hidden="true">
+        <div class="rail__num">N°</div>
+        <div class="rail__line"></div>
+        <div class="rail__txt">VIERSA · 2026 · CR</div>
+        <div class="rail__line"></div>
+        <div class="rail__num">↓</div>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__main">
+          <span class="kicker">
+            <span class="kicker__dot"></span>
+            Taller mecánico · Costa Rica
+          </span>
+
+          <h1 class="hero__title" id="heroTitle">
+            <span class="line"><span class="word">Mecánica</span></span>
+            <span class="line"><span class="word">de</span> <span class="word word--accent">precisión</span><span class="word__dot">.</span></span>
+            <span class="line line--small"><span class="word">tu auto, en las mejores manos.</span></span>
+          </h1>
+
+          <p class="hero__lede">
+            En <strong>VIERSA</strong> diagnosticamos, reparamos y mantenemos
+            tu vehículo con criterio técnico, repuestos verificados y total
+            transparencia. Sin sorpresas. Sin rodeos.
+          </p>
+
+          <div class="hero__ctas">
+            <a class="btn btn--primary btn--lg btn--magnetic" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20agendar%20una%20revisi%C3%B3n." target="_blank" rel="noopener">
+              <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.001 3C9.373 3 4 8.373 4 15a11.9 11.9 0 0 0 1.69 6.155L4 29l8.087-1.66A11.97 11.97 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3Zm5.46 14.392c-.3-.15-1.77-.873-2.043-.972-.273-.1-.473-.15-.673.15-.2.3-.773.972-.948 1.172-.175.2-.35.224-.65.075-.3-.15-1.265-.466-2.41-1.488-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.46.13-.61.133-.132.3-.343.45-.515.149-.173.199-.298.299-.498.1-.2.05-.373-.025-.523-.075-.149-.673-1.622-.922-2.222-.243-.586-.49-.506-.673-.515l-.573-.01c-.2 0-.523.075-.797.373-.273.298-1.045 1.02-1.045 2.488s1.07 2.886 1.22 3.086c.149.2 2.107 3.214 5.103 4.503.713.307 1.27.49 1.704.628.715.227 1.366.195 1.882.118.574-.085 1.77-.722 2.02-1.42.249-.697.249-1.295.174-1.42-.075-.124-.273-.199-.573-.349Z"/></svg>
+              Agendar por WhatsApp
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#servicios">
+              Ver servicios
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="meta">
+              <span class="meta__num" data-count="14">0</span>
+              <span class="meta__label">años de oficio</span>
+            </div>
+            <div class="meta">
+              <span class="meta__num" data-count="2300">0</span>
+              <span class="meta__label">vehículos atendidos</span>
+            </div>
+            <div class="meta">
+              <span class="meta__num" data-count="98" data-suffix="%">0</span>
+              <span class="meta__label">clientes que vuelven</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__panel" aria-label="Cita rápida">
+          <div class="panel">
+            <div class="panel__head">
+              <span class="panel__tag">Cita rápida</span>
+              <span class="panel__time" id="liveTime">--:--</span>
+            </div>
+
+            <div class="panel__hud" aria-hidden="true">
+              <svg class="rpm" viewBox="0 0 200 200">
+                <defs>
+                  <linearGradient id="rpmGrad" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#ff7849"/>
+                    <stop offset="100%" stop-color="#ff4d1c"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="100" cy="100" r="86" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="14"/>
+                <circle class="rpm__arc" cx="100" cy="100" r="86" fill="none" stroke="url(#rpmGrad)" stroke-width="14" stroke-linecap="round" stroke-dasharray="540" stroke-dashoffset="540" transform="rotate(-90 100 100)"/>
+                <text x="100" y="96" text-anchor="middle" class="rpm__big">98%</text>
+                <text x="100" y="118" text-anchor="middle" class="rpm__lbl">Diagnóstico ok</text>
+              </svg>
+              <ul class="hud__list">
+                <li><span>Motor</span><b class="ok">Óptimo</b></li>
+                <li><span>Frenos</span><b class="warn">Revisar</b></li>
+                <li><span>Aceite</span><b class="ok">Nuevo</b></li>
+                <li><span>Batería</span><b class="ok">12.6 V</b></li>
+              </ul>
+            </div>
+
+            <a class="panel__cta" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20una%20revisi%C3%B3n%20completa." target="_blank" rel="noopener">
+              Solicitar revisión completa
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Brands marquee -->
+      <div class="brands-bar" id="marcas">
+        <div class="brands-bar__head">
+          <span>Servicio especializado para</span>
+        </div>
+        <div class="marquee">
+          <div class="marquee__track">
+            <div class="marquee__set">
+              <img src="media/toyota.png" alt="Toyota" />
+              <img src="media/hyundai.png" alt="Hyundai" />
+              <img src="media/kia.png" alt="Kia" />
+              <img src="media/chevrolet.png" alt="Chevrolet" />
+              <img src="media/suzuki.png" alt="Suzuki" />
+            </div>
+            <div class="marquee__set" aria-hidden="true">
+              <img src="media/toyota.png" alt="" />
+              <img src="media/hyundai.png" alt="" />
+              <img src="media/kia.png" alt="" />
+              <img src="media/chevrolet.png" alt="" />
+              <img src="media/suzuki.png" alt="" />
+            </div>
+            <div class="marquee__set" aria-hidden="true">
+              <img src="media/toyota.png" alt="" />
+              <img src="media/hyundai.png" alt="" />
+              <img src="media/kia.png" alt="" />
+              <img src="media/chevrolet.png" alt="" />
+              <img src="media/suzuki.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <p class="brands-bar__note">Y muchas marcas más · Nissan · Mazda · Mitsubishi · Honda · Ford · Volkswagen</p>
+      </div>
+    </section>
+
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section" id="servicios">
+      <header class="section__head">
+        <div class="section__id">
+          <span>01</span>
+          <em>Servicios</em>
+        </div>
+        <h2 class="section__title">
+          Todo lo que tu auto necesita,
+          <span class="text-accent">bajo un mismo techo.</span>
+        </h2>
+        <p class="section__lede">
+          Equipo certificado, herramientas calibradas y un proceso claro:
+          inspección, diagnóstico, presupuesto y reparación. Tú decides en cada paso.
+        </p>
+      </header>
+
+      <div class="services">
+        <article class="service" data-tilt>
+          <div class="service__num">01</div>
+          <div class="service__icon" data-icon="engine"></div>
+          <h3>Mecánica general</h3>
+          <p>Reparaciones de motor, distribución, embrague, transmisión y todo el sistema mecánico.</p>
+          <span class="service__more">Cotizar →</span>
+        </article>
+
+        <article class="service" data-tilt>
+          <div class="service__num">02</div>
+          <div class="service__icon" data-icon="brake"></div>
+          <h3>Frenos</h3>
+          <p>Pastillas, discos, mordazas, líquido y ABS. Frenado seguro en cada parada.</p>
+          <span class="service__more">Cotizar →</span>
+        </article>
+
+        <article class="service" data-tilt>
+          <div class="service__num">03</div>
+          <div class="service__icon" data-icon="oil"></div>
+          <h3>Lubricentro</h3>
+          <p>Cambio de aceite y filtros con especificaciones del fabricante. Servicio en minutos.</p>
+          <span class="service__more">Cotizar →</span>
+        </article>
+
+        <article class="service" data-tilt>
+          <div class="service__num">04</div>
+          <div class="service__icon" data-icon="suspension"></div>
+          <h3>Suspensión y dirección</h3>
+          <p>Amortiguadores, rótulas, terminales, bujes. Manejo estable y sin ruidos.</p>
+          <span class="service__more">Cotizar →</span>
+        </article>
+
+        <article class="service" data-tilt>
+          <div class="service__num">05</div>
+          <div class="service__icon" data-icon="diagnostic"></div>
+          <h3>Diagnóstico computarizado</h3>
+          <p>Escáner OBD-II multimarca para detectar fallas eléctricas y de inyección con precisión.</p>
+          <span class="service__more">Cotizar →</span>
+        </article>
+
+        <article class="service" data-tilt>
+          <div class="service__num">06</div>
+          <div class="service__icon" data-icon="ac"></div>
+          <h3>Aire acondicionado</h3>
+          <p>Carga de gas, mantenimiento del compresor y limpieza del sistema. Frío garantizado.</p>
+          <span class="service__more">Cotizar →</span>
+        </article>
+
+        <article class="service" data-tilt>
+          <div class="service__num">07</div>
+          <div class="service__icon" data-icon="spark"></div>
+          <h3>Sistema eléctrico</h3>
+          <p>Baterías, alternadores, arranques, luces e instalaciones. Diagnóstico punto a punto.</p>
+          <span class="service__more">Cotizar →</span>
+        </article>
+
+        <article class="service" data-tilt>
+          <div class="service__num">08</div>
+          <div class="service__icon" data-icon="wheel"></div>
+          <h3>Alineamiento y balanceo</h3>
+          <p>Geometría de ruedas y balanceo dinámico. Llantas que duran más, manejo más limpio.</p>
+          <span class="service__more">Cotizar →</span>
+        </article>
+
+        <article class="service" data-tilt>
+          <div class="service__num">09</div>
+          <div class="service__icon" data-icon="shield"></div>
+          <h3>Mantenimiento preventivo</h3>
+          <p>Planes por kilometraje. Anticipamos fallas y extendemos la vida de tu vehículo.</p>
+          <span class="service__more">Cotizar →</span>
+        </article>
+      </div>
+
+      <div class="services__cta">
+        <p>¿No encuentras tu servicio?</p>
+        <a class="btn btn--primary btn--magnetic" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20necesito%20un%20servicio%20espec%C3%ADfico." target="_blank" rel="noopener">
+          Pregúntanos por WhatsApp
+        </a>
+      </div>
+    </section>
+
+
+    <!-- ============ PROCESO / SHOWCASE ============ -->
+    <section class="section showcase">
+      <header class="section__head section__head--center">
+        <div class="section__id"><span>02</span><em>Proceso</em></div>
+        <h2 class="section__title">
+          Un protocolo claro,
+          <span class="text-accent">paso a paso.</span>
+        </h2>
+      </header>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">01</span>
+          <h4>Recepción e inspección</h4>
+          <p>Recibimos el vehículo, escuchamos el síntoma y documentamos el estado inicial.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">02</span>
+          <h4>Diagnóstico</h4>
+          <p>Pruebas físicas y escáner. Identificamos la causa raíz, no solo el síntoma.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">03</span>
+          <h4>Presupuesto</h4>
+          <p>Te explicamos qué hay que hacer, qué repuestos usaremos y cuánto vale. Sin letra chica.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">04</span>
+          <h4>Reparación</h4>
+          <p>Trabajo limpio, herramientas adecuadas y control de calidad antes de la entrega.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">05</span>
+          <h4>Entrega y garantía</h4>
+          <p>Te entregamos el auto probado y con garantía sobre el trabajo realizado.</p>
+        </li>
+      </ol>
+    </section>
+
+
+    <!-- ============ REPUESTOS ============ -->
+    <section class="section" id="repuestos">
+      <header class="section__head">
+        <div class="section__id"><span>03</span><em>Repuestos</em></div>
+        <h2 class="section__title">
+          Repuestos <span class="text-accent">más vendidos.</span>
+        </h2>
+        <p class="section__lede">
+          Stock disponible y entrega ágil. Trabajamos con repuesto original y alternativas
+          confiables, siempre con tu autorización.
+        </p>
+      </header>
+
+      <div class="parts">
+        <article class="part">
+          <div class="part__media" data-part="brake"></div>
+          <div class="part__body">
+            <span class="part__tag">Frenos</span>
+            <h4>Pastillas y discos</h4>
+            <p>Multimarca · cerámicas · semi-metálicas</p>
+            <div class="part__row">
+              <span class="part__stock"><i></i> En stock</span>
+              <a href="https://wa.me/50688888888?text=Hola%2C%20necesito%20pastillas%20de%20freno." target="_blank" rel="noopener">Pedir →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="part">
+          <div class="part__media" data-part="oil"></div>
+          <div class="part__body">
+            <span class="part__tag">Lubricantes</span>
+            <h4>Aceite y filtros</h4>
+            <p>Sintético · semi-sintético · convencional</p>
+            <div class="part__row">
+              <span class="part__stock"><i></i> En stock</span>
+              <a href="https://wa.me/50688888888?text=Hola%2C%20necesito%20cambio%20de%20aceite." target="_blank" rel="noopener">Pedir →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="part">
+          <div class="part__media" data-part="battery"></div>
+          <div class="part__body">
+            <span class="part__tag">Eléctrico</span>
+            <h4>Baterías</h4>
+            <p>12V · selladas · libre mantenimiento</p>
+            <div class="part__row">
+              <span class="part__stock"><i></i> En stock</span>
+              <a href="https://wa.me/50688888888?text=Hola%2C%20necesito%20una%20bater%C3%ADa." target="_blank" rel="noopener">Pedir →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="part">
+          <div class="part__media" data-part="filter"></div>
+          <div class="part__body">
+            <span class="part__tag">Motor</span>
+            <h4>Filtros</h4>
+            <p>Aire · combustible · cabina · aceite</p>
+            <div class="part__row">
+              <span class="part__stock"><i></i> En stock</span>
+              <a href="https://wa.me/50688888888?text=Hola%2C%20necesito%20filtros." target="_blank" rel="noopener">Pedir →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="part">
+          <div class="part__media" data-part="spark"></div>
+          <div class="part__body">
+            <span class="part__tag">Encendido</span>
+            <h4>Bujías y bobinas</h4>
+            <p>Iridio · platino · cobre</p>
+            <div class="part__row">
+              <span class="part__stock"><i></i> En stock</span>
+              <a href="https://wa.me/50688888888?text=Hola%2C%20necesito%20buj%C3%ADas." target="_blank" rel="noopener">Pedir →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="part">
+          <div class="part__media" data-part="shock"></div>
+          <div class="part__body">
+            <span class="part__tag">Suspensión</span>
+            <h4>Amortiguadores</h4>
+            <p>Delanteros · traseros · gas o aceite</p>
+            <div class="part__row">
+              <span class="part__stock"><i></i> En stock</span>
+              <a href="https://wa.me/50688888888?text=Hola%2C%20necesito%20amortiguadores." target="_blank" rel="noopener">Pedir →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <header class="section__head">
+        <div class="section__id"><span>04</span><em>FAQ</em></div>
+        <h2 class="section__title">
+          Preguntas <span class="text-accent">frecuentes.</span>
+        </h2>
+      </header>
+
+      <div class="faq">
+        <details class="faq__item" open>
+          <summary>
+            <span>¿Cuál es el horario del taller?</span>
+            <i class="faq__plus" aria-hidden="true"></i>
+          </summary>
+          <div class="faq__body">
+            <p>Atendemos de <strong>lunes a viernes de 8:00 a.m. a 5:30 p.m.</strong> y los <strong>sábados de 8:00 a.m. a 12:00 m.d.</strong> Para emergencias, escríbenos por WhatsApp y te coordinamos.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span>¿Trabajan todas las marcas?</span>
+            <i class="faq__plus" aria-hidden="true"></i>
+          </summary>
+          <div class="faq__body">
+            <p>Sí. Trabajamos con la mayoría de marcas del mercado: Toyota, Hyundai, Kia, Chevrolet, Suzuki, Nissan, Mazda, Mitsubishi, Honda, Ford, Volkswagen y más. Si tu marca no está en la lista, escríbenos.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span>¿Necesito cita previa?</span>
+            <i class="faq__plus" aria-hidden="true"></i>
+          </summary>
+          <div class="faq__body">
+            <p>Para revisiones rápidas atendemos por orden de llegada, pero <strong>recomendamos agendar</strong> por WhatsApp para asegurar disponibilidad y tiempo de servicio.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span>¿Dan garantía sobre los trabajos?</span>
+            <i class="faq__plus" aria-hidden="true"></i>
+          </summary>
+          <div class="faq__body">
+            <p>Sí. Toda reparación incluye garantía sobre la mano de obra y los repuestos instalados, según el tipo de servicio. Te lo explicamos al entregar el presupuesto.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span>¿Cuánto tarda un servicio?</span>
+            <i class="faq__plus" aria-hidden="true"></i>
+          </summary>
+          <div class="faq__body">
+            <p>Un cambio de aceite o revisión rápida toma <strong>30–60 minutos</strong>. Servicios mayores se cotizan con tiempo estimado al momento del diagnóstico.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span>¿Aceptan tarjeta o SINPE?</span>
+            <i class="faq__plus" aria-hidden="true"></i>
+          </summary>
+          <div class="faq__body">
+            <p>Sí, aceptamos efectivo, tarjeta de débito/crédito y <strong>SINPE Móvil</strong>. Consulta opciones de pago al agendar.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary>
+            <span>¿Hacen presupuesto antes de reparar?</span>
+            <i class="faq__plus" aria-hidden="true"></i>
+          </summary>
+          <div class="faq__body">
+            <p>Siempre. Diagnosticamos primero, te enviamos el presupuesto detallado y solo procedemos con tu aprobación. Cero sorpresas.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+
+    <!-- ============ UBICACION ============ -->
+    <section class="section section--map" id="ubicacion">
+      <header class="section__head">
+        <div class="section__id"><span>05</span><em>Ubicación</em></div>
+        <h2 class="section__title">
+          Visítanos en <span class="text-accent">Tres Ríos.</span>
+        </h2>
+      </header>
+
+      <div class="map">
+        <div class="map__info">
+          <div class="map__card">
+            <span class="map__tag">Sede principal</span>
+            <h3>Concepción de Tres Ríos</h3>
+            <p>La Unión, Cartago · Costa Rica</p>
+
+            <ul class="map__list">
+              <li>
+                <span class="map__lbl">Horario</span>
+                <span>Lun-Vie · 8:00–17:30</span>
+              </li>
+              <li>
+                <span class="map__lbl">Sábados</span>
+                <span>8:00–12:00</span>
+              </li>
+              <li>
+                <span class="map__lbl">WhatsApp</span>
+                <span>+506 8888-8888</span>
+              </li>
+            </ul>
+
+            <div class="map__ctas">
+              <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&query=Concepci%C3%B3n+de+Tres+R%C3%ADos%2C+La+Uni%C3%B3n%2C+Cartago%2C+Costa+Rica" target="_blank" rel="noopener">
+                Cómo llegar
+              </a>
+              <a class="btn btn--ghost" href="https://wa.me/50688888888" target="_blank" rel="noopener">
+                Escribir
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map__frame">
+          <iframe
+            title="Ubicación VIERSA en Concepción de Tres Ríos, Costa Rica"
+            src="https://maps.google.com/maps?q=Concepci%C3%B3n%20de%20Tres%20R%C3%ADos%2C%20La%20Uni%C3%B3n%2C%20Cartago%2C%20Costa%20Rica&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="map__overlay" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="section cta-final">
+      <div class="cta-final__bg" aria-hidden="true">
+        <div class="cta-final__grid"></div>
+      </div>
+      <h2>
+        Tu auto merece <span class="text-accent">un buen taller.</span>
+      </h2>
+      <p>Escríbenos y agenda en menos de un minuto.</p>
+      <a class="btn btn--primary btn--xl btn--magnetic" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20agendar%20un%20servicio." target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.001 3C9.373 3 4 8.373 4 15a11.9 11.9 0 0 0 1.69 6.155L4 29l8.087-1.66A11.97 11.97 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3Zm5.46 14.392c-.3-.15-1.77-.873-2.043-.972-.273-.1-.473-.15-.673.15-.2.3-.773.972-.948 1.172-.175.2-.35.224-.65.075-.3-.15-1.265-.466-2.41-1.488-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.46.13-.61.133-.132.3-.343.45-.515.149-.173.199-.298.299-.498.1-.2.05-.373-.025-.523-.075-.149-.673-1.622-.922-2.222-.243-.586-.49-.506-.673-.515l-.573-.01c-.2 0-.523.075-.797.373-.273.298-1.045 1.02-1.045 2.488s1.07 2.886 1.22 3.086c.149.2 2.107 3.214 5.103 4.503.713.307 1.27.49 1.704.628.715.227 1.366.195 1.882.118.574-.085 1.77-.722 2.02-1.42.249-.697.249-1.295.174-1.42-.075-.124-.273-.199-.573-.349Z"/></svg>
+        Conversemos por WhatsApp
+      </a>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="media/logo_viersa.png" alt="VIERSA" />
+        <div>
+          <strong>VIERSA</strong>
+          <small>Mecánica de precisión · Costa Rica</small>
+        </div>
+      </div>
+
+      <nav class="footer__cols">
+        <div>
+          <h5>Servicios</h5>
+          <a href="#servicios">Mecánica general</a>
+          <a href="#servicios">Frenos</a>
+          <a href="#servicios">Lubricentro</a>
+          <a href="#servicios">Diagnóstico</a>
+        </div>
+        <div>
+          <h5>Información</h5>
+          <a href="#repuestos">Repuestos</a>
+          <a href="#faq">Preguntas frecuentes</a>
+          <a href="#ubicacion">Ubicación</a>
+        </div>
+        <div>
+          <h5>Contacto</h5>
+          <a href="https://wa.me/50688888888" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="tel:+50688888888">+506 8888-8888</a>
+          <span>Tres Ríos, Costa Rica</span>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> VIERSA · Todos los derechos reservados</span>
+      <span class="footer__mark">Hecho con detalle.</span>
+    </div>
+  </footer>
+
+  <!-- ============ Floating WhatsApp ============ -->
+  <a class="fab" href="https://wa.me/50688888888?text=Hola%20VIERSA" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.001 3C9.373 3 4 8.373 4 15a11.9 11.9 0 0 0 1.69 6.155L4 29l8.087-1.66A11.97 11.97 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3Zm5.46 14.392c-.3-.15-1.77-.873-2.043-.972-.273-.1-.473-.15-.673.15-.2.3-.773.972-.948 1.172-.175.2-.35.224-.65.075-.3-.15-1.265-.466-2.41-1.488-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.46.13-.61.133-.132.3-.343.45-.515.149-.173.199-.298.299-.498.1-.2.05-.373-.025-.523-.075-.149-.673-1.622-.922-2.222-.243-.586-.49-.506-.673-.515l-.573-.01c-.2 0-.523.075-.797.373-.273.298-1.045 1.02-1.045 2.488s1.07 2.886 1.22 3.086c.149.2 2.107 3.214 5.103 4.503.713.307 1.27.49 1.704.628.715.227 1.366.195 1.882.118.574-.085 1.77-.722 2.02-1.42.249-.697.249-1.295.174-1.42-.075-.124-.273-.199-.573-.349Z"/></svg>
+    <span class="fab__pulse" aria-hidden="true"></span>
+  </a>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
