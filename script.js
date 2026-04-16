@@ -167,14 +167,35 @@
   const sections = $$('.section, .brands-bar, .services__cta, .panel, .step, .service, .part, .faq__item, .map__card, .map__frame');
   sections.forEach(el => el.setAttribute('data-reveal',''));
 
+  // Stagger delay for grouped items
+  const staggerGroups = [
+    { sel: '.services .service', step: 70 },
+    { sel: '.steps .step',       step: 90 },
+    { sel: '.parts .part',       step: 90 },
+    { sel: '.faq .faq__item',    step: 60 },
+  ];
+  staggerGroups.forEach(({ sel, step }) => {
+    $$(sel).forEach((el, i) => {
+      el.style.transitionDelay = (i * step) + 'ms';
+    });
+  });
+
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add('is-in');
       io.unobserve(entry.target);
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
   sections.forEach(el => io.observe(el));
+
+  // Safety net: if anything is still hidden after 3s, force-reveal it
+  setTimeout(() => {
+    sections.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('is-in');
+    });
+  }, 3000);
 
   // Counter trigger
   const counterIO = new IntersectionObserver((entries) => {
@@ -257,44 +278,10 @@
       });
     });
 
-    // Service cards stagger
-    gsap.from('.service', {
-      y: 40, opacity: 0, duration: .8, stagger: .08, ease: 'power2.out',
-      scrollTrigger: { trigger: '.services', start: 'top 75%' }
-    });
-
-    // Steps stagger
-    gsap.from('.step', {
-      y: 40, opacity: 0, duration: .7, stagger: .12, ease: 'power2.out',
-      scrollTrigger: { trigger: '.steps', start: 'top 80%' }
-    });
-
-    // Parts stagger
-    gsap.from('.part', {
-      y: 50, opacity: 0, duration: .8, stagger: .1, ease: 'power3.out',
-      scrollTrigger: { trigger: '.parts', start: 'top 80%' }
-    });
-
-    // FAQ
-    gsap.from('.faq__item', {
-      y: 20, opacity: 0, duration: .55, stagger: .08, ease: 'power2.out',
-      scrollTrigger: { trigger: '.faq', start: 'top 85%' }
-    });
-
-    // CTA final big text
+    // CTA final big text (no IntersectionObserver dupe)
     gsap.from('.cta-final h2', {
       scale: 0.94, opacity: 0, duration: 1.1, ease: 'expo.out',
       scrollTrigger: { trigger: '.cta-final', start: 'top 70%' }
-    });
-
-    // Map card slide
-    gsap.from('.map__card', {
-      x: -30, opacity: 0, duration: .9, ease: 'power3.out',
-      scrollTrigger: { trigger: '.map', start: 'top 75%' }
-    });
-    gsap.from('.map__frame', {
-      x: 30, opacity: 0, duration: .9, ease: 'power3.out',
-      scrollTrigger: { trigger: '.map', start: 'top 75%' }
     });
   }
 

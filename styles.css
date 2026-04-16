@@ -623,25 +623,36 @@ h1,h2,h3,h4,h5,h6 {
 }
 .marquee__track{
   display: flex;
-  gap: 80px;
+  gap: 40px;
   width: max-content;
   animation: marquee 32s linear infinite;
 }
 .marquee__set{
   display: flex;
-  gap: 80px;
+  gap: 40px;
   align-items: center;
-  padding-right: 80px;
+  padding-right: 40px;
 }
 .marquee__set img{
-  height: 54px;
+  height: 84px;
   width: auto;
-  filter: brightness(0) invert(1) opacity(.55);
-  transition: filter .35s, transform .35s var(--ease-out);
+  max-width: 180px;
+  background: #ffffff;
+  padding: 14px 26px;
+  border-radius: 14px;
+  object-fit: contain;
+  box-shadow:
+    0 10px 30px -12px rgba(0,0,0,.6),
+    inset 0 0 0 1px rgba(0,0,0,.04);
+  opacity: .94;
+  transition: opacity .3s, transform .4s var(--ease-out), box-shadow .3s;
 }
 .marquee__set img:hover{
-  filter: brightness(0) invert(1) opacity(1);
-  transform: scale(1.08);
+  opacity: 1;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:
+    0 18px 40px -10px rgba(255,77,28,.35),
+    inset 0 0 0 1px rgba(0,0,0,.04);
 }
 @keyframes marquee { to { transform: translateX(-33.333%); } }
 
@@ -1316,8 +1327,9 @@ h1,h2,h3,h4,h5,h6 {
 @media (max-width: 520px){
   .hero__title{ font-size: clamp(44px, 14vw, 84px); }
   .meta__num{ font-size: 26px; }
-  .marquee__set img{ height: 38px; }
-  .marquee__set, .marquee__track{ gap: 56px; }
+  .marquee__set img{ height: 60px; padding: 10px 18px; }
+  .marquee__set, .marquee__track{ gap: 24px; }
+  .marquee__set{ padding-right: 24px; }
   .fab{ bottom: 16px; right: 16px; width: 54px; height: 54px; }
   .fab svg{ width: 26px; height: 26px; }
 }
