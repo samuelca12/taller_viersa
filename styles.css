@@ -77,6 +77,8 @@
   --noise-opacity: .035;
 }
 
+/* ==================== Shared tokens (fonts / rhythm / motion) ==================== */
+:root{
   /* fonts */
   --font-display:  'Space Grotesk', 'Inter', system-ui, sans-serif;
   --font-body:     'Inter', system-ui, sans-serif;
