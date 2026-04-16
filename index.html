@@ -168,38 +168,17 @@
           </div>
         </div>
 
-        <aside class="hero__panel" aria-label="Cita rápida">
-          <div class="panel">
-            <div class="panel__head">
-              <span class="panel__tag">Cita rápida</span>
-              <span class="panel__time" id="liveTime">--:--</span>
+        <aside class="hero__panel" aria-label="Logo VIERSA">
+          <div class="hero-logo">
+            <div class="hero-logo__halo" aria-hidden="true"></div>
+            <img class="hero-logo__img" src="media/logo_viersa.png" alt="VIERSA Taller Mecánico" />
+            <div class="hero-logo__rings" aria-hidden="true">
+              <span></span><span></span><span></span>
             </div>
-
-            <div class="panel__hud" aria-hidden="true">
-              <svg class="rpm" viewBox="0 0 200 200">
-                <defs>
-                  <linearGradient id="rpmGrad" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0%" stop-color="#ff7849"/>
-                    <stop offset="100%" stop-color="#ff4d1c"/>
-                  </linearGradient>
-                </defs>
-                <circle cx="100" cy="100" r="86" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="14"/>
-                <circle class="rpm__arc" cx="100" cy="100" r="86" fill="none" stroke="url(#rpmGrad)" stroke-width="14" stroke-linecap="round" stroke-dasharray="540" stroke-dashoffset="540" transform="rotate(-90 100 100)"/>
-                <text x="100" y="96" text-anchor="middle" class="rpm__big">98%</text>
-                <text x="100" y="118" text-anchor="middle" class="rpm__lbl">Diagnóstico ok</text>
-              </svg>
-              <ul class="hud__list">
-                <li><span>Motor</span><b class="ok">Óptimo</b></li>
-                <li><span>Frenos</span><b class="warn">Revisar</b></li>
-                <li><span>Aceite</span><b class="ok">Nuevo</b></li>
-                <li><span>Batería</span><b class="ok">12.6 V</b></li>
-              </ul>
+            <div class="hero-logo__meta">
+              <span class="hero-logo__tag">Costa Rica · 2026</span>
+              <span class="hero-logo__time" id="liveTime">--:--</span>
             </div>
-
-            <a class="panel__cta" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20una%20revisi%C3%B3n%20completa." target="_blank" rel="noopener">
-              Solicitar revisión completa
-              <span aria-hidden="true">→</span>
-            </a>
           </div>
         </aside>
       </div>
@@ -274,7 +253,7 @@
           <div class="service__icon" data-icon="engine"></div>
           <h3>Mecánica general</h3>
           <p>Reparaciones de motor, distribución, embrague, transmisión y todo el sistema mecánico.</p>
-          <span class="service__more">Cotizar →</span>
+          <a class="service__more" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20Mec%C3%A1nica%20general." target="_blank" rel="noopener">Cotizar →</a>
         </article>
 
         <article class="service" data-tilt>
@@ -282,7 +261,7 @@
           <div class="service__icon" data-icon="brake"></div>
           <h3>Frenos</h3>
           <p>Pastillas, discos, mordazas, líquido y ABS. Frenado seguro en cada parada.</p>
-          <span class="service__more">Cotizar →</span>
+          <a class="service__more" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20servicio%20de%20Frenos." target="_blank" rel="noopener">Cotizar →</a>
         </article>
 
         <article class="service" data-tilt>
@@ -290,7 +269,7 @@
           <div class="service__icon" data-icon="oil"></div>
           <h3>Lubricentro</h3>
           <p>Cambio de aceite y filtros con especificaciones del fabricante. Servicio en minutos.</p>
-          <span class="service__more">Cotizar →</span>
+          <a class="service__more" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20servicio%20de%20Lubricentro." target="_blank" rel="noopener">Cotizar →</a>
         </article>
 
         <article class="service" data-tilt>
@@ -298,7 +277,7 @@
           <div class="service__icon" data-icon="suspension"></div>
           <h3>Suspensión y dirección</h3>
           <p>Amortiguadores, rótulas, terminales, bujes. Manejo estable y sin ruidos.</p>
-          <span class="service__more">Cotizar →</span>
+          <a class="service__more" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20Suspensi%C3%B3n%20y%20direcci%C3%B3n." target="_blank" rel="noopener">Cotizar →</a>
         </article>
 
         <article class="service" data-tilt>
@@ -306,7 +285,7 @@
           <div class="service__icon" data-icon="diagnostic"></div>
           <h3>Diagnóstico computarizado</h3>
           <p>Escáner OBD-II multimarca para detectar fallas eléctricas y de inyección con precisión.</p>
-          <span class="service__more">Cotizar →</span>
+          <a class="service__more" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20Diagn%C3%B3stico%20computarizado." target="_blank" rel="noopener">Cotizar →</a>
         </article>
 
         <article class="service" data-tilt>
@@ -314,7 +293,7 @@
           <div class="service__icon" data-icon="ac"></div>
           <h3>Aire acondicionado</h3>
           <p>Carga de gas, mantenimiento del compresor y limpieza del sistema. Frío garantizado.</p>
-          <span class="service__more">Cotizar →</span>
+          <a class="service__more" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20servicio%20de%20Aire%20acondicionado." target="_blank" rel="noopener">Cotizar →</a>
         </article>
 
         <article class="service" data-tilt>
@@ -322,7 +301,7 @@
           <div class="service__icon" data-icon="spark"></div>
           <h3>Sistema eléctrico</h3>
           <p>Baterías, alternadores, arranques, luces e instalaciones. Diagnóstico punto a punto.</p>
-          <span class="service__more">Cotizar →</span>
+          <a class="service__more" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20Sistema%20el%C3%A9ctrico." target="_blank" rel="noopener">Cotizar →</a>
         </article>
 
         <article class="service" data-tilt>
@@ -330,7 +309,7 @@
           <div class="service__icon" data-icon="wheel"></div>
           <h3>Alineamiento y balanceo</h3>
           <p>Geometría de ruedas y balanceo dinámico. Llantas que duran más, manejo más limpio.</p>
-          <span class="service__more">Cotizar →</span>
+          <a class="service__more" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20Alineamiento%20y%20balanceo." target="_blank" rel="noopener">Cotizar →</a>
         </article>
 
         <article class="service" data-tilt>
@@ -338,7 +317,7 @@
           <div class="service__icon" data-icon="shield"></div>
           <h3>Mantenimiento preventivo</h3>
           <p>Planes por kilometraje. Anticipamos fallas y extendemos la vida de tu vehículo.</p>
-          <span class="service__more">Cotizar →</span>
+          <a class="service__more" href="https://wa.me/50688888888?text=Hola%20VIERSA%2C%20quiero%20cotizar%20Mantenimiento%20preventivo." target="_blank" rel="noopener">Cotizar →</a>
         </article>
       </div>
 
