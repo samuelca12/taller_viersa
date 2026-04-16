@@ -1049,6 +1049,7 @@ h1,h2,h3,h4,h5,h6 {
 /* ---------- FAQ ---------- */
 .faq{
   max-width: 940px;
+  margin-inline: auto;
   border-top: 1px solid var(--line);
 }
 .faq__item{
@@ -1398,7 +1399,11 @@ h1,h2,h3,h4,h5,h6 {
   .section__title{ font-size: clamp(32px, 9vw, 56px); }
 
   .services{ grid-template-columns: 1fr; }
-  .parts{ grid-template-columns: 1fr; }
+  .parts{ grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .parts .part__body{ padding: 14px 14px 16px; }
+  .parts .part h4{ font-size: 16px; }
+  .parts .part p{ font-size: 12px; margin-bottom: 10px; }
+  .parts .part__row{ flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 10px; }
   .steps{ grid-template-columns: 1fr; }
   .footer__top{ grid-template-columns: 1fr; gap: 28px; }
   .footer__cols{ grid-template-columns: repeat(2, 1fr); }
