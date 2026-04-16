@@ -15,6 +15,69 @@
     setTimeout(() => $('#loader')?.classList.add('is-done'), 600);
   });
 
+  /* ---------- Theme toggle (dark <-> light) ---------- */
+  (() => {
+    const html = document.documentElement;
+    const btn = $('#themeToggle');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const isLight = html.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        html.removeAttribute('data-theme');
+        try { localStorage.setItem('viersa-theme', 'dark'); } catch(_) {}
+      } else {
+        html.setAttribute('data-theme', 'light');
+        try { localStorage.setItem('viersa-theme', 'light'); } catch(_) {}
+      }
+      // Refresh ScrollTrigger so any layout shifts get repositioned
+      if (window.ScrollTrigger) ScrollTrigger.refresh();
+    });
+  })();
+
+  /* ---------- Rotating word in hero ---------- */
+  (() => {
+    const container = $('#rotatingWord');
+    if (!container) return;
+    const words = ['precisión', 'confianza', 'experiencia', 'calidad', 'oficio', 'garantía'];
+
+    // Measure max width to avoid layout shift
+    function measureMax(){
+      const ghost = document.createElement('span');
+      ghost.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;font:inherit;';
+      container.appendChild(ghost);
+      let max = 0;
+      words.forEach(w => { ghost.textContent = w; max = Math.max(max, ghost.offsetWidth); });
+      container.removeChild(ghost);
+      container.style.setProperty('--rot-w', max + 'px');
+    }
+    measureMax();
+    window.addEventListener('resize', () => {
+      // re-measure when font size changes (clamp on viewport)
+      requestAnimationFrame(measureMax);
+    }, { passive: true });
+
+    function setWord(text, cls){
+      const span = document.createElement('span');
+      span.className = 'rot__item ' + cls;
+      span.textContent = text;
+      container.appendChild(span);
+      return span;
+    }
+
+    let i = 0;
+    setWord(words[0], 'is-active');
+
+    setInterval(() => {
+      const current = container.querySelector('.is-active');
+      if (current){
+        current.className = 'rot__item is-exit';
+        current.addEventListener('animationend', () => current.remove(), { once: true });
+      }
+      i = (i + 1) % words.length;
+      setWord(words[i], 'is-active');
+    }, 2400);
+  })();
+
   /* ---------- Year ---------- */
   const yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
