@@ -92,12 +92,11 @@
     const liveTime = $('#liveTime');
     if (liveTime) liveTime.textContent = t;
 
-    // Open: Mon-Fri 8:00-17:30, Sat 8:00-12:00
+    // Open: Mon-Fri 7:00-17:00
     const day = now.getDay();
     const minutes = now.getHours() * 60 + now.getMinutes();
     let open = false;
-    if (day >= 1 && day <= 5) open = minutes >= 8*60 && minutes <= 17*60+30;
-    else if (day === 6)       open = minutes >= 8*60 && minutes <= 12*60;
+    if (day >= 1 && day <= 5) open = minutes >= 7*60 && minutes <= 17*60;
 
     const pill = $('.status-pill');
     const statusText = $('#statusText');
